@@ -1,12 +1,28 @@
-<h1>Restaurants</h1>
+<div class="container" style="min-height: 100vh; display:flex; flex-direction: column;">
+  <h1>Restaurants</h1>
 
-<%= link_to "Create a Restaurant", new_restaurant_path %>
+  <%= link_to "Create a Restaurant", new_restaurant_path %>
+  <div class="d-flex" style='height: 100%; flex-grow: 1; '>
+    <div class="cards">
+      <% @restaurants.each do |restaurant| %>
+        <div class="card-product">
+          <div class="card-product-infos">
+            <h2>
+              <%= link_to restaurant.name, restaurant_path(restaurant) %>
+              <%= link_to '❌', restaurant, method: :delete, data: { confirm: "Are you sure?" } %>
+            </h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li>
-      <%= link_to restaurant.name, restaurant_path(restaurant) %>
-      <%= link_to '❌', restaurant, method: :delete, data: { confirm: "Are you sure?" } %>
-    </li>
-  <% end %>
-</ul>
+    
+    <div id="map"
+        class="w-100"
+        data-markers="<%= @markers.to_json %>"
+        <%# this is setting the dataset as the mapbox api key from .env %>
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+
+
+</div>
