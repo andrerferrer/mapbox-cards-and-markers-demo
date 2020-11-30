@@ -5,7 +5,8 @@ class RestaurantsController < ApplicationController
       {
         lat: restaurant.latitude,
         lng: restaurant.longitude,
-        popUp: render_to_string(partial: "restaurants/partials/pop_up", locals: { restaurant: restaurant })
+        popUp: render_to_string(partial: "restaurants/partials/pop_up", locals: { restaurant: restaurant }),
+        id: restaurant.id
       }
     end
   end
@@ -16,7 +17,8 @@ class RestaurantsController < ApplicationController
     @marker = [{
       lat: @restaurant.latitude,
       lng: @restaurant.longitude,
-      popUp: render_to_string(partial: "restaurants/partials/pop_up", locals: { restaurant: restaurant })
+      popUp: render_to_string(partial: "restaurants/partials/pop_up", locals: { restaurant: @restaurant }),
+      id: @restaurant.id
     }]
   end
 
