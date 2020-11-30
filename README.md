@@ -2,7 +2,7 @@
 
 This is a demo to show-case how to implement a map with cards (clickable) and markers with pop-ups. Like this:
 
-![gif](https://i.imgur.com/4sFe6oK.gif
+![gif](https://i.imgur.com/4sFe6oK.gif)
 
 This demo was created from [this boilerplate](https://github.com/andrerferrer/geocoder-map#goal).
 
