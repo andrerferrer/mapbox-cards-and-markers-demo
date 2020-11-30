@@ -1,8 +1,10 @@
 # GOAL
 
-This is a demo to show-case how to implement a map with `MapBox` and the [`geocoder` gem](https://github.com/alexreisner/geocoder#geocoding-objects).
+This is a demo to show-case how to implement a map with cards (clickable) and markers with pop-ups. Like this:
 
-This demo was created from [this boilerplate](https://github.com/andrerferrer/geocoder-gem#goal).
+![gif](https://i.imgur.com/4sFe6oK.gif
+
+This demo was created from [this boilerplate](https://github.com/andrerferrer/geocoder-map#goal).
 
 [You can also check my other demos](https://github.com/andrerferrer/dedemos/blob/master/README.md#ded%C3%A9mos).
 
