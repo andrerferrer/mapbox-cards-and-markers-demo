@@ -5,12 +5,6 @@
   <%= pluralize @restaurant.reviews.size, "review" %>
 </h2>
 
-<div id="map"
-     style="width: 100%; height: 25vh;"
-     data-markers="<%= @marker.to_json %>"
-     <%# this is setting the dataset as the mapbox api key from .env %>
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
 <div id="reviews">
   <% if @restaurant.reviews.blank? %>
     Be the first to leave a review for <%= @restaurant.name %>
