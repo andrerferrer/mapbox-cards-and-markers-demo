@@ -5,7 +5,7 @@
   <div class="d-flex" style='height: 100%; flex-grow: 1; '>
     <div class="cards">
       <% @restaurants.each do |restaurant| %>
-        <div class="card-product">
+        <div id="restaurant-card-<%= restaurant.id %>" class="card-product">
           <div class="card-product-infos">
             <h2>
               <%= link_to restaurant.name, restaurant_path(restaurant) %>
