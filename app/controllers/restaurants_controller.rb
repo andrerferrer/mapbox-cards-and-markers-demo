@@ -4,7 +4,8 @@ class RestaurantsController < ApplicationController
     @markers = @restaurants.map do |restaurant|
       {
         lat: restaurant.latitude,
-        lng: restaurant.longitude
+        lng: restaurant.longitude,
+        popUp: render_to_string(partial: "restaurants/partials/pop_up", locals: { restaurant: restaurant })
       }
     end
   end
@@ -14,7 +15,8 @@ class RestaurantsController < ApplicationController
     @review = Review.new
     @marker = [{
       lat: @restaurant.latitude,
-      lng: @restaurant.longitude
+      lng: @restaurant.longitude,
+      popUp: render_to_string(partial: "restaurants/partials/pop_up", locals: { restaurant: restaurant })
     }]
   end
 

@@ -15,12 +15,15 @@ const addMarkersToMap = (map) => {
   // Take the marker from the view in `app/views/restaurants/show.html.erb`
   const markers = JSON.parse(mapElement.dataset.markers);
   markers.forEach((marker) => {
+    const popup = new mapboxgl.Popup().setHTML(marker.popUp);
+
     new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
+      .setPopup(popup)
       .addTo(map);
   });
   
-  zoomMapToMarker(map, markers) // add this line
+  zoomMapToMarker(map, markers)
 }
 
 
