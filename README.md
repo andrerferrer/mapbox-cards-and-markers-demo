@@ -10,7 +10,9 @@ This demo was created from [this boilerplate](https://github.com/andrerferrer/ge
 
 ## What needs to be done?
 
-**Remember to create a `.env` file and add your [mapbox api key](https://account.mapbox.com/) to it**
+**Remember to create a `.env` file and add your [mapbox api key](https://account.mapbox.com/) to it.**
+
+If you don't know how to do it, [check how to here](https://github.com/andrerferrer/geocoder-map#2-grab-a-mapbox-api-key).
 
 Check it in [app/javascript/plugins/init_mapbox.js](app/javascript/plugins/init_mapbox.js).
 
