@@ -10,7 +10,9 @@ This demo was created from [this boilerplate](https://github.com/andrerferrer/ge
 
 ## What needs to be done?
 
-Check it in `app/javascript/plugins/init_mapbox.js`.
+**Remember to create a `.env` file and add your [mapbox api key](https://account.mapbox.com/) to it**
+
+Check it in [app/javascript/plugins/init_mapbox.js](app/javascript/plugins/init_mapbox.js).
 
 More details coming soon!
 
